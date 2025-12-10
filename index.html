@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Umanizzare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-area">
+                <h1><img src="uma.png" alt="Símbolo Umanizzare" class="logo-icon" style="height: 43px; width: auto;">manizzare</h1> 
+                <p>Instituto de desenvolvimento humano</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#como-ajudar">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="section-padding">
+        <div class="container">
+            <div class="grid-2">
+                <div class="card card-placeholder">
+                    <i class="fas fa-file-alt fa-3x"></i>
+                    <p>Sobre a Instituição</p>
+                </div>
+                <div class="card card-placeholder">
+                    <i class="fas fa-file-alt fa-3x"></i>
+                    <p>Relatórios</p>
+                </div>
+            </div>
+            
+            <div class="donation-area">
+                <div class="pix-pill" onclick="copiarPix()">
+                    <span>Doações (PIX/CNPJ): 30.617.357/0001-84</span>
+                    <i class="fas fa-copy" title="Copiar"></i>
+                </div>
+                <p id="msg-copiado" style="display:none; font-size: 0.8rem; color: green; margin-top: 5px;">Copiado!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quem-somos" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Quem Somos</h2>
+            <div class="grid-layout-somos">
+                <div class="card card-full">
+                    <i class="fas fa-file-invoice fa-3x"></i>
+                    <h3>Nossa História</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card card-img-placeholder">
+                    <i class="fas fa-image fa-3x"></i>
+                </div>
+                <div class="card card-img-placeholder">
+                    <i class="fas fa-image fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-ajudar" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            <div class="grid-4">
+                <div class="card small-card"><i class="fas fa-image"></i></div>
+                <div class="card small-card"><i class="fas fa-image"></i></div>
+                <div class="card small-card"><i class="fas fa-image"></i></div>
+                <div class="card small-card"><i class="fas fa-image"></i></div>
+            </div>
+            <div class="card big-text-card">
+                <i class="fas fa-file-signature fa-3x"></i>
+                <h3>Detalhes dos Projetos</h3>
+                <p>Descrição detalhada de como a ajuda impacta a comunidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-wrapper">
+                <div class="contact-links">
+                    <a href="#" class="contact-btn"><i class="fab fa-facebook-f"></i> Instituto Umanizzare</a>
+                    <a href="https://wa.me/5561996048818" class="contact-btn"><i class="fab fa-whatsapp"></i> (61) 99604-8818</a>
+                    <a href="#" class="contact-btn"><i class="fab fa-instagram"></i> @institutoumanizzare</a>
+                    <a href="mailto:institutoumanizzare@gmail.com" class="contact-btn"><i class="far fa-envelope"></i> institutoumanizzare@gmail.com</a>
+                </div>
+
+                <div class="map-area">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.468707198754!2d-47.9678!3d-15.8845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUzJzAyLjQiUyA0N8KwNTgnMDQuMSJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <div class="address-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>SIBS Quadra 3 Conjunto B Lote 13,<br>Núcleo Bandeirante, Distrito Federal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Instituto Umanizzare. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function copiarPix() {
+            const pix = "30.617.357/0001-84";
+            navigator.clipboard.writeText(pix);
+            const msg = document.getElementById('msg-copiado');
+            msg.style.display = 'block';
+            setTimeout(() => { msg.style.display = 'none'; }, 2000);
+        }
+    </script>
+</body>
+</html>
